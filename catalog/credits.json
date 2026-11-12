@@ -111,7 +111,7 @@
    "name": "AWS Free Tier credits (Free plan)",
    "kind": "cpu",
    "form": "signup_credit",
-   "free_amount": "$100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first. A Free plan account is not eligible for promotional credits; a Paid plan account is.",
+   "free_amount": "$100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first. The Free plan is limited to select services and cannot scale workloads beyond the credit. It charges nothing unless you upgrade to a Paid plan or activate paid-only services. A Free plan account is not eligible for promotional credits; a Paid plan account is.",
    "resets": "one_time",
    "who_qualifies": [
     "New AWS customers.",
@@ -314,7 +314,7 @@
    "name": "Deepgram Startup Program",
    "kind": "inference",
    "form": "signup_credit",
-   "free_amount": "$1,000 in Startup Program credits to start, with tiers worth up to $100,000 as you grow. Each credit grant expires 12 months after issue.",
+   "free_amount": "$1,000 in Startup Program credits to start, with tiers worth up to $100,000 as you grow. Each credit grant expires 12 months after issue. Deepgram's Model Improvement Partnership Program page says some request data goes into model training unless a request sets mip_opt_out=true.",
    "resets": "one_time",
    "who_qualifies": [
     "An AI builder or early-stage startup, in production or launching within 6 months.",
@@ -328,7 +328,8 @@
     "Apply on the Deepgram Startup Program page and describe your voice AI product.",
     "Wait for review; Deepgram typically responds within one week.",
     "Approved credits reach your console within 24 to 48 hours.",
-    "Create an API key in the console and keep it in your keychain or secret store, never in a command."
+    "Create an API key in the console and keep it in your keychain or secret store, never in a command.",
+    "Set mip_opt_out=true on every request, as Deepgram's Model Improvement Partnership Program page shows, to keep your audio out of training."
    ],
    "source": "https://deepgram.com/startup-program",
    "checked": "2026-11-12"
