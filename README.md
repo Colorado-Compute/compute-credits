@@ -32,24 +32,30 @@ Rows are from `catalog/credits.json`, read between 2026-11-02 and 2026-11-12; ea
 
 | Credit | Free amount | Form | Card | Past the amount | Read |
 | --- | --- | --- | --- | --- | --- |
+| [AMD Developer Cloud complimentary credit](https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html) | $100 of AMD Developer Cloud credit for AMD Instinct MI300X GPUs. It expires 30 days from deposit unless the credit confirmation email says otherwise. | Sign-up credit | No | bills | 2026-11-12 |
 | [Comfy Cloud Free plan](https://comfy.org/pricing) | 5 free runs on real GPUs and free Comfy Agent credits for new users. | Sign-up credit | Not stated | stops | 2026-11-02 |
 | [Hugging Face ZeroGPU (free account)](https://huggingface.co/docs/hub/spaces-zerogpu) | 5 minutes of ZeroGPU time per day on a free account (2 minutes unauthenticated) across any ZeroGPU Space. The default size is half an NVIDIA RTX Pro 6000 Blackwell with 48 GB VRAM. | Free tier | No | stops | 2026-11-02 |
-| [Modal Starter](https://modal.com/pricing) | $30 per month of included compute (GPU, CPU, memory) for Functions and Sandboxes on the Starter plan, with 10 GPU concurrency and 100 containers. | Free tier | Yes | bills | 2026-11-02 |
+| [Modal Starter](https://modal.com/pricing) | $30 per month of free compute (GPU, CPU, memory) for Functions and Sandboxes on the $0 Starter plan, with 3 workspace seats, 10 GPU concurrency and 100 containers. Shared Endpoint tokens bill from the first request. At the listed RTX PRO 6000 rate of $0.000842 a second, $30 buys about 9.9 GPU hours (computed here). | Free tier | Yes | bills | 2026-11-12 |
 
 ### CPU
 
 | Credit | Free amount | Form | Card | Past the amount | Read |
 | --- | --- | --- | --- | --- | --- |
+| [AWS Free Tier credits (Free plan)](https://aws.amazon.com/free/) | $100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first. | Sign-up credit | No | stops | 2026-11-12 |
+| [Azure free account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account) | A $200 credit for Azure services within 30 days, not spendable on Spot Virtual Machines. New customers also get free monthly amounts of 20+ services for 12 months and 65+ always-free services. | Sign-up credit | Yes | stops | 2026-11-12 |
 | [Oracle Cloud Always Free (OCI Ampere A1 Compute)](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm) | 1,500 OCPU hours and 9,000 GB hours per month on VM.Standard.A1.Flex (Arm), which Oracle states equals 2 OCPUs and 12 GB of memory. Also 200 GB of boot and block volume storage and up to two AMD E2.1.Micro VMs. | Free tier | Yes | stops | 2026-11-02 |
+| [Oracle Cloud Free Trial credit](https://www.oracle.com/cloud/free/faq/) | A US$300 cloud credit, in select countries, valid for up to 30 days. Always Free services continue after the trial. | Sign-up credit | Yes | stops | 2026-11-12 |
 
 ### Inference
 
 | Credit | Free amount | Form | Card | Past the amount | Read |
 | --- | --- | --- | --- | --- | --- |
 | [AssemblyAI free credit](https://support.assemblyai.com/articles/5370767329-can-i-sign-up-for-free) | Up to $50 of audio on a limited trial: pre-recorded transcription, Speech Understanding and streaming speech-to-text. | Sign-up credit | No | stops | 2026-11-02 |
-| [Cerebras Inference Free Trial](https://inference-docs.cerebras.ai/support/rate-limits) | $5 in credits after adding a verified payment method, valid 30 days, with gpt-oss-120b at 5 requests a minute and 1 million tokens a day. | Sign-up credit | Yes | stops | 2026-11-02 |
+| [Baseten new-customer credit (credit referral)](https://www.baseten.co/talk-to-us/credit-referral/) | $250 of Dedicated Inference or $100 of Model API credits, expiring 1 month after issue. The page does not say you get both. | Sign-up credit | Not stated | unknown | 2026-11-12 |
+| [Cerebras Inference Free Trial](https://inference-docs.cerebras.ai/support/rate-limits) | $5 in credits after adding a verified payment method, valid 30 days across all public models, with gpt-oss-120b at 5 requests a minute and 1 million tokens a day. | Sign-up credit | Yes | stops | 2026-11-12 |
 | [Cloudflare AI Search (formerly AutoRAG)](https://developers.cloudflare.com/ai-search/platform/limits-pricing/) | Monthly: 5 million ingestion tokens, 10 GB-month storage, 1,000 semantic queries and 1,000 full-text queries, on Workers Free and Workers Paid. | Free tier | Not stated | bills | 2026-11-02 |
 | [Cloudflare Workers AI free daily allocation](https://developers.cloudflare.com/workers-ai/platform/pricing/) | 10,000 Neurons per day of Workers AI inference, on both Workers Free and Workers Paid. | Free tier | No | bills | 2026-11-02 |
+| [Deepgram Startup Program](https://deepgram.com/startup-program) | $1,000 in Startup Program credits to start, with tiers worth up to $100,000 as you grow. Each credit grant expires 12 months after issue. | Sign-up credit | Not stated | unknown | 2026-11-12 |
 | [ElevenLabs Free](https://elevenlabs.io/pricing) | 10,000 credits per month, about 10 minutes of text to speech (1 credit per character on V2 Multilingual), and 3 Studio projects. | Free tier | Not stated | unknown | 2026-11-02 |
 | [GroqCloud Free plan](https://console.groq.com/docs/rate-limits) | A Free plan with per-model rate limits. Groq's rate-limits page names Free plan limits but shows only the Developer plan's base limits, such as whisper-large-v3 at 20 requests a minute, 2,000 requests a day and 28,800 audio seconds a day, so read your own limits in the console. | Free tier | Not stated | stops | 2026-11-12 |
 | [Mistral Studio Free mode](https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key) | API access on a new Mistral Studio account in Free mode, enabled by default with no credit card. Rate limits apply; the docs give no numbers. | Free tier | No | stops | 2026-11-02 |
@@ -77,7 +83,7 @@ Rows are from `catalog/credits.json`, read between 2026-11-02 and 2026-11-12; ea
 
 ### Sign-up credits for anyone
 
-One-time sign-up credits that need no company, such as cloud trials, are listed in the `no_incorporation` bucket of [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits/blob/main/catalog/programs.json) today. They move to this catalog as `signup_credit` rows in a later pull request.
+One-time sign-up credits that need no company, such as cloud trials, are the `Sign-up credit` rows in the tables above. Six of them, and the Modal and Cerebras facts merged into existing rows, moved here from the `no_incorporation` bucket of [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) on 2026-11-12. That repo keeps the programs that need a company, funding or an invitation.
 
 ### Discounts
 

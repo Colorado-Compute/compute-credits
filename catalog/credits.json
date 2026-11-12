@@ -16,6 +16,30 @@
  ],
  "rows": [
   {
+   "id": "amd-dev-cloud",
+   "vendor": "AMD",
+   "name": "AMD Developer Cloud complimentary credit",
+   "kind": "gpu",
+   "form": "signup_credit",
+   "free_amount": "$100 of AMD Developer Cloud credit for AMD Instinct MI300X GPUs. It expires 30 days from deposit unless the credit confirmation email says otherwise.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "Members of the free AMD AI Developer Program who apply for the credit.",
+    "Independent developers and open-source contributors working on ML, low-level programming or AI applications.",
+    "AMD decides each allocation at its sole discretion, from the use case you describe."
+   ],
+   "card_required": false,
+   "overage": "bills",
+   "setup_steps": [
+    "Join the AMD AI Developer Program from the AMD Developer Cloud page.",
+    "Describe your use case and planned GPU use; approved credit arrives within 3 business days.",
+    "Open the Developer Cloud through the $100 credit link and sign in there in the browser.",
+    "Add no payment method, so the GPU VM stops at the credit's end; copy your data off first."
+   ],
+   "source": "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+   "checked": "2026-11-12"
+  },
+  {
    "id": "comfy-cloud-free",
    "vendor": "Comfy Organization",
    "name": "Comfy Cloud Free plan",
@@ -64,7 +88,7 @@
    "name": "Modal Starter",
    "kind": "gpu",
    "form": "free_tier",
-   "free_amount": "$30 per month of included compute (GPU, CPU, memory) for Functions and Sandboxes on the Starter plan, with 10 GPU concurrency and 100 containers.",
+   "free_amount": "$30 per month of free compute (GPU, CPU, memory) for Functions and Sandboxes on the $0 Starter plan, with 3 workspace seats, 10 GPU concurrency and 100 containers. Shared Endpoint tokens bill from the first request. At the listed RTX PRO 6000 rate of $0.000842 a second, $30 buys about 9.9 GPU hours (computed here).",
    "resets": "monthly",
    "who_qualifies": [
     "Anyone with a Modal account.",
@@ -79,7 +103,54 @@
     "Run a Function with a GPU and watch the usage page."
    ],
    "source": "https://modal.com/pricing",
-   "checked": "2026-11-02"
+   "checked": "2026-11-12"
+  },
+  {
+   "id": "aws-free-plan",
+   "vendor": "Amazon Web Services",
+   "name": "AWS Free Tier credits (Free plan)",
+   "kind": "cpu",
+   "form": "signup_credit",
+   "free_amount": "$100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New AWS customers.",
+    "AWS asks some new customers for a payment method to verify identity; most need none."
+   ],
+   "card_required": false,
+   "overage": "stops",
+   "setup_steps": [
+    "Choose Create a free account on the AWS Free Tier page and sign up on the Free plan.",
+    "Sign in with aws login, which opens the browser; no key is typed.",
+    "Stay on the Free plan: AWS charges nothing unless you upgrade to a Paid plan.",
+    "Complete the Explore AWS activities in the console to earn up to $100 more."
+   ],
+   "source": "https://aws.amazon.com/free/",
+   "checked": "2026-11-12"
+  },
+  {
+   "id": "azure-free",
+   "vendor": "Microsoft",
+   "name": "Azure free account",
+   "kind": "cpu",
+   "form": "signup_credit",
+   "free_amount": "A $200 credit for Azure services within 30 days, not spendable on Spot Virtual Machines. New customers also get free monthly amounts of 20+ services for 12 months and 65+ always-free services.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New Azure customers only.",
+    "A phone number, a credit or debit card that is not prepaid, and a Microsoft or GitHub account.",
+    "A temporary $1 authorization may appear on the card during verification."
+   ],
+   "card_required": true,
+   "overage": "stops",
+   "setup_steps": [
+    "Choose Try Azure for free on the Azure account page.",
+    "Sign in with a Microsoft or GitHub account, then verify a phone number and a card.",
+    "Sign in with az login, which opens the browser.",
+    "Do not move to pay as you go: after 30 days the account is disabled instead of billed."
+   ],
+   "source": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account",
+   "checked": "2026-11-12"
   },
   {
    "id": "oracle-always-free",
@@ -105,6 +176,30 @@
    "checked": "2026-11-02"
   },
   {
+   "id": "oracle-trial",
+   "vendor": "Oracle",
+   "name": "Oracle Cloud Free Trial credit",
+   "kind": "cpu",
+   "form": "signup_credit",
+   "free_amount": "A US$300 cloud credit, in select countries, valid for up to 30 days. Always Free services continue after the trial.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "One Oracle Cloud Free Trial or Always Free account per person.",
+    "A credit card or a debit card that works like one; PIN debit, virtual, single-use and prepaid cards are refused.",
+    "Accurate and valid contact and billing information."
+   ],
+   "card_required": true,
+   "overage": "stops",
+   "setup_steps": [
+    "Choose Start for free on the Oracle Cloud Free Tier page and verify the card.",
+    "Sign in with oci session authenticate, which opens the browser.",
+    "Use the US$300 credit within 30 days; paid instances made on the trial are reclaimed when it ends.",
+    "Keep only Always Free resources after the trial, unless you choose to upgrade."
+   ],
+   "source": "https://www.oracle.com/cloud/free/faq/",
+   "checked": "2026-11-12"
+  },
+  {
    "id": "assemblyai-free",
    "vendor": "AssemblyAI",
    "name": "AssemblyAI free credit",
@@ -126,12 +221,35 @@
    "checked": "2026-11-02"
   },
   {
+   "id": "baseten-250",
+   "vendor": "Baseten",
+   "name": "Baseten new-customer credit (credit referral)",
+   "kind": "inference",
+   "form": "signup_credit",
+   "free_amount": "$250 of Dedicated Inference or $100 of Model API credits, expiring 1 month after issue. The page does not say you get both.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New Baseten customers only.",
+    "A valid business email and a valid business use case."
+   ],
+   "card_required": null,
+   "overage": "unknown",
+   "setup_steps": [
+    "Fill in the credit referral form with a business email.",
+    "Pick Dedicated Inference or Model API credits.",
+    "Create an API key in the Baseten console and keep it in your keychain or secret store, never in a command.",
+    "Use the credit within 1 month of issue, then stop."
+   ],
+   "source": "https://www.baseten.co/talk-to-us/credit-referral/",
+   "checked": "2026-11-12"
+  },
+  {
    "id": "cerebras-free",
    "vendor": "Cerebras",
    "name": "Cerebras Inference Free Trial",
    "kind": "inference",
    "form": "signup_credit",
-   "free_amount": "$5 in credits after adding a verified payment method, valid 30 days, with gpt-oss-120b at 5 requests a minute and 1 million tokens a day.",
+   "free_amount": "$5 in credits after adding a verified payment method, valid 30 days across all public models, with gpt-oss-120b at 5 requests a minute and 1 million tokens a day.",
    "resets": "one_time",
    "who_qualifies": [
     "New Cerebras Inference accounts with a verified payment method.",
@@ -145,7 +263,7 @@
     "Access pauses when the credit runs out or expires after 30 days."
    ],
    "source": "https://inference-docs.cerebras.ai/support/rate-limits",
-   "checked": "2026-11-02"
+   "checked": "2026-11-12"
   },
   {
    "id": "cloudflare-ai-search",
@@ -189,6 +307,31 @@
    ],
    "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
    "checked": "2026-11-02"
+  },
+  {
+   "id": "deepgram",
+   "vendor": "Deepgram",
+   "name": "Deepgram Startup Program",
+   "kind": "inference",
+   "form": "signup_credit",
+   "free_amount": "$1,000 in Startup Program credits to start, with tiers worth up to $100,000 as you grow. Each credit grant expires 12 months after issue.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "An AI builder or early-stage startup, in production or launching within 6 months.",
+    "Committed to building and engaging with the Deepgram community.",
+    "Not for agencies or consultants building for clients.",
+    "Existing customers and companies that raised over $10M are reviewed case by case."
+   ],
+   "card_required": null,
+   "overage": "unknown",
+   "setup_steps": [
+    "Apply on the Deepgram Startup Program page and describe your voice AI product.",
+    "Wait for review; Deepgram typically responds within one week.",
+    "Approved credits reach your console within 24 to 48 hours.",
+    "Create an API key in the console and keep it in your keychain or secret store, never in a command."
+   ],
+   "source": "https://deepgram.com/startup-program",
+   "checked": "2026-11-12"
   },
   {
    "id": "elevenlabs-free",
