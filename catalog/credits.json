@@ -111,7 +111,7 @@
    "name": "AWS Free Tier credits (Free plan)",
    "kind": "cpu",
    "form": "signup_credit",
-   "free_amount": "$100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first.",
+   "free_amount": "$100 in credits at sign-up, and up to $100 more for exploring key services. The Free plan account closes 6 months after it opens or when the credits run out, whichever comes first. A Free plan account is not eligible for promotional credits; a Paid plan account is.",
    "resets": "one_time",
    "who_qualifies": [
     "New AWS customers.",
