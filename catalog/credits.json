@@ -1,7 +1,7 @@
 {
  "version": 1,
  "about": "Free compute credits any developer can get, startup or not: GPU, CPU, inference, CI and hosting. Each row was read on the vendor's own page (source) on its checked date. A free tier changes without notice, so read the source page before you sign up.",
- "checked": "2026-11-02",
+ "checked": "2026-11-12",
  "kinds": [
   "gpu",
   "cpu",
@@ -217,10 +217,10 @@
    "name": "GroqCloud Free plan",
    "kind": "inference",
    "form": "free_tier",
-   "free_amount": "openai/gpt-oss-120b and gpt-oss-20b at 30 requests a minute, 1,000 requests a day and 200,000 tokens a day; whisper-large-v3 at 2,000 requests and 28,800 audio seconds a day.",
+   "free_amount": "A Free plan with per-model rate limits. Groq's rate-limits page names Free plan limits but shows only the Developer plan's base limits, such as whisper-large-v3 at 20 requests a minute, 2,000 requests a day and 28,800 audio seconds a day, so read your own limits in the console.",
    "resets": "daily",
    "who_qualifies": [
-    "Anyone with a GroqCloud account on the Free plan."
+    "Anyone with a GroqCloud account on the Free plan. The figures shown are the Developer plan's base limits, the only ones the page shows."
    ],
    "card_required": null,
    "overage": "stops",
@@ -230,7 +230,7 @@
     "Stay on the Free plan; requests over a limit get HTTP 429."
    ],
    "source": "https://console.groq.com/docs/rate-limits",
-   "checked": "2026-11-02"
+   "checked": "2026-11-12"
   },
   {
    "id": "mistral-api-free",
