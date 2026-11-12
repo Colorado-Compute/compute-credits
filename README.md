@@ -26,7 +26,7 @@ flowchart LR
 
 ## The credits
 
-Rows are from `catalog/credits.json`, read on 2026-11-02. "Past the amount" is what the vendor's page says happens at the limit: `stops`, `bills` or `unknown`. A `bills` row needs a spend stop before you run.
+Rows are from `catalog/credits.json`, read between 2026-11-02 and 2026-11-12; each row's date is in its last column. "Past the amount" is what the vendor's page says happens at the limit: `stops`, `bills` or `unknown`. A `bills` row needs a spend stop before you run.
 
 ### GPU
 
