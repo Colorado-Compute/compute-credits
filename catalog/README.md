@@ -34,9 +34,9 @@
 | Some vendors, by policy | A publisher choice, not a judgment on the free tier |
 | Account ids, emails, balances, `cs_*` and `evidence` fields | Private. `check.py` and `tools/checks.py` refuse them |
 
-## Room for sign-up programs
+## Sign-up programs
 
-The `no_incorporation` programs in `Colorado-Startups/startup-credits` (cloud trials and other credits that need no company) move here as `signup_credit` rows in a later pull request. Their `requirements` map to `who_qualifies`, and their `apply_steps` to `setup_steps`.
+The `no_incorporation` programs of `Colorado-Startups/startup-credits` (cloud trials and other credits that need no company) moved here on 2026-11-12 as `signup_credit` rows. Their `requirements` became `who_qualifies`, and their `apply_steps` became `setup_steps`. startup-credits keeps the programs that need a company, funding or an invitation.
 
 ## Commands
 
