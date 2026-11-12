@@ -1,0 +1,490 @@
+{
+ "version": 1,
+ "about": "Free compute credits any developer can get, startup or not: GPU, CPU, inference, CI and hosting. Each row was read on the vendor's own page (source) on its checked date. A free tier changes without notice, so read the source page before you sign up.",
+ "checked": "2026-11-12",
+ "kinds": [
+  "gpu",
+  "cpu",
+  "inference",
+  "ci",
+  "hosting"
+ ],
+ "forms": [
+  "free_tier",
+  "signup_credit",
+  "discount"
+ ],
+ "rows": [
+  {
+   "id": "comfy-cloud-free",
+   "vendor": "Comfy Organization",
+   "name": "Comfy Cloud Free plan",
+   "kind": "gpu",
+   "form": "signup_credit",
+   "free_amount": "5 free runs on real GPUs and free Comfy Agent credits for new users.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New Comfy Cloud users."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create an account on comfy.org.",
+    "Open Comfy Cloud in the browser and run a workflow.",
+    "When the free runs are used, the agent pauses until credits are added; add none."
+   ],
+   "source": "https://comfy.org/pricing",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "hf-zerogpu-free",
+   "vendor": "Hugging Face",
+   "name": "Hugging Face ZeroGPU (free account)",
+   "kind": "gpu",
+   "form": "free_tier",
+   "free_amount": "5 minutes of ZeroGPU time per day on a free account (2 minutes unauthenticated) across any ZeroGPU Space. The default size is half an NVIDIA RTX Pro 6000 Blackwell with 48 GB VRAM.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with a free Hugging Face account.",
+    "Hosting up to 2 ZeroGPU Spaces needs a personal account in good standing: verified email, older than 30 days."
+   ],
+   "card_required": false,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a free account on huggingface.co and verify the email.",
+    "Sign in with hf auth login, which prompts for a token; never pass it as an argument.",
+    "Open a ZeroGPU Space and run it; usage stops at the daily quota."
+   ],
+   "source": "https://huggingface.co/docs/hub/spaces-zerogpu",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "modal-starter",
+   "vendor": "Modal Labs",
+   "name": "Modal Starter",
+   "kind": "gpu",
+   "form": "free_tier",
+   "free_amount": "$30 per month of included compute (GPU, CPU, memory) for Functions and Sandboxes on the Starter plan, with 10 GPU concurrency and 100 containers.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a Modal account.",
+    "Using a GPU requires a valid payment method on file."
+   ],
+   "card_required": true,
+   "overage": "bills",
+   "setup_steps": [
+    "Create an account at modal.com and add a payment method.",
+    "Sign in with modal setup, which opens the browser.",
+    "Set the workspace spend limit to $0 so workloads stop when the included credit is used.",
+    "Run a Function with a GPU and watch the usage page."
+   ],
+   "source": "https://modal.com/pricing",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "oracle-always-free",
+   "vendor": "Oracle",
+   "name": "Oracle Cloud Always Free (OCI Ampere A1 Compute)",
+   "kind": "cpu",
+   "form": "free_tier",
+   "free_amount": "1,500 OCPU hours and 9,000 GB hours per month on VM.Standard.A1.Flex (Arm), which Oracle states equals 2 OCPUs and 12 GB of memory. Also 200 GB of boot and block volume storage and up to two AMD E2.1.Micro VMs.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone who opens an Oracle Cloud Free Tier account.",
+    "A credit or debit card for identity verification; prepaid, virtual and PIN debit cards are refused."
+   ],
+   "card_required": true,
+   "overage": "stops",
+   "setup_steps": [
+    "Sign up for the Oracle Cloud Free Tier and verify the card.",
+    "Sign in with oci session authenticate, which opens the browser.",
+    "Stay on the Free Tier: paid resources need an upgrade, so usage cannot run past the limits.",
+    "Keep instances in use: Oracle may reclaim one whose CPU, network and memory stay under 20% for 7 days."
+   ],
+   "source": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "assemblyai-free",
+   "vendor": "AssemblyAI",
+   "name": "AssemblyAI free credit",
+   "kind": "inference",
+   "form": "signup_credit",
+   "free_amount": "Up to $50 of audio on a limited trial: pre-recorded transcription, Speech Understanding and streaming speech-to-text.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New AssemblyAI accounts; no card at sign-up."
+   ],
+   "card_required": false,
+   "overage": "stops",
+   "setup_steps": [
+    "Create an AssemblyAI account.",
+    "Copy the API key from the dashboard into your keychain or secret store, never into a command.",
+    "Once the $50 is used, the API returns an error until you add a card; add none."
+   ],
+   "source": "https://support.assemblyai.com/articles/5370767329-can-i-sign-up-for-free",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cerebras-free",
+   "vendor": "Cerebras",
+   "name": "Cerebras Inference Free Trial",
+   "kind": "inference",
+   "form": "signup_credit",
+   "free_amount": "$5 in credits after adding a verified payment method, valid 30 days, with gpt-oss-120b at 5 requests a minute and 1 million tokens a day.",
+   "resets": "one_time",
+   "who_qualifies": [
+    "New Cerebras Inference accounts with a verified payment method.",
+    "For development, evaluation and experimentation, not production."
+   ],
+   "card_required": true,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a Cerebras Inference account and add a payment method.",
+    "Create an API key in the console and keep it in your keychain or secret store, never in a command.",
+    "Access pauses when the credit runs out or expires after 30 days."
+   ],
+   "source": "https://inference-docs.cerebras.ai/support/rate-limits",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cloudflare-ai-search",
+   "vendor": "Cloudflare",
+   "name": "Cloudflare AI Search (formerly AutoRAG)",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "Monthly: 5 million ingestion tokens, 10 GB-month storage, 1,000 semantic queries and 1,000 full-text queries, on Workers Free and Workers Paid.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a Cloudflare account."
+   ],
+   "card_required": null,
+   "overage": "bills",
+   "setup_steps": [
+    "Create a Cloudflare account.",
+    "Sign in with wrangler login, which opens the browser.",
+    "Create an AI Search instance in the dashboard.",
+    "Usage past the monthly amount is metered: stop at the free amount yourself."
+   ],
+   "source": "https://developers.cloudflare.com/ai-search/platform/limits-pricing/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cloudflare-workers-ai-free",
+   "vendor": "Cloudflare",
+   "name": "Cloudflare Workers AI free daily allocation",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "10,000 Neurons per day of Workers AI inference, on both Workers Free and Workers Paid.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with a Cloudflare account."
+   ],
+   "card_required": false,
+   "overage": "bills",
+   "setup_steps": [
+    "Create a Cloudflare account.",
+    "Sign in with wrangler login, which opens the browser.",
+    "Stay on Workers Free: use past the daily allocation fails with an error instead of billing."
+   ],
+   "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "elevenlabs-free",
+   "vendor": "ElevenLabs",
+   "name": "ElevenLabs Free",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "10,000 credits per month, about 10 minutes of text to speech (1 credit per character on V2 Multilingual), and 3 Studio projects.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with an ElevenLabs account, for non-commercial use only."
+   ],
+   "card_required": null,
+   "overage": "unknown",
+   "setup_steps": [
+    "Create an ElevenLabs account on the Free plan.",
+    "Opt out of training on your content in the settings, if you want that.",
+    "No spend cap is named on the page read: stop at the free amount yourself."
+   ],
+   "source": "https://elevenlabs.io/pricing",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "groq-free",
+   "vendor": "Groq",
+   "name": "GroqCloud Free plan",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "A Free plan with per-model rate limits. Groq's rate-limits page names Free plan limits but shows only the Developer plan's base limits, such as whisper-large-v3 at 20 requests a minute, 2,000 requests a day and 28,800 audio seconds a day, so read your own limits in the console.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with a GroqCloud account on the Free plan. The figures shown are the Developer plan's base limits, the only ones the page shows."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create an account in the GroqCloud console.",
+    "Create an API key in the console and keep it in your keychain or secret store, never in a command.",
+    "Stay on the Free plan; requests over a limit get HTTP 429."
+   ],
+   "source": "https://console.groq.com/docs/rate-limits",
+   "checked": "2026-11-12"
+  },
+  {
+   "id": "mistral-api-free",
+   "vendor": "Mistral AI",
+   "name": "Mistral Studio Free mode",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "API access on a new Mistral Studio account in Free mode, enabled by default with no credit card. Rate limits apply; the docs give no numbers.",
+   "resets": null,
+   "who_qualifies": [
+    "Anyone who creates a Mistral Studio account."
+   ],
+   "card_required": false,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a Mistral Studio account.",
+    "Create an API key in Studio and keep it in your keychain or secret store, never in a command.",
+    "Opt out of training on your inputs in the settings, if you want that."
+   ],
+   "source": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "nvidia-build-free",
+   "vendor": "NVIDIA",
+   "name": "NVIDIA API Catalog trial (build.nvidia.com)",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "Free inference on hosted models in the API Catalog, up to 40 requests a minute and 10,000 requests a day.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with an NVIDIA account, for internal testing and evaluation only, not production."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create an NVIDIA account on build.nvidia.com.",
+    "Generate an API key on a model page and keep it in your keychain or secret store, never in a command.",
+    "Use it for testing only; production needs a paid subscription."
+   ],
+   "source": "https://build.nvidia.com/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "openrouter-free",
+   "vendor": "OpenRouter",
+   "name": "OpenRouter free model variants (:free)",
+   "kind": "inference",
+   "form": "free_tier",
+   "free_amount": "Free model variants (:free) at 20 requests a minute and 50 requests a day, or 1,000 a day after at least 10 credits purchased in all time.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with an OpenRouter account."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create an account on openrouter.ai.",
+    "Create an API key in the settings and keep it in your keychain or secret store, never in a command.",
+    "Call only model ids ending in :free, and keep the balance at or above zero.",
+    "Turn on the privacy setting that stops routing to providers that train, if you want that."
+   ],
+   "source": "https://openrouter.ai/docs/api/reference/limits",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "blacksmith-free",
+   "vendor": "Blacksmith Software",
+   "name": "Blacksmith free tier",
+   "kind": "ci",
+   "form": "free_tier",
+   "free_amount": "3,000 x64 2 vCPU minutes per month per organization for GitHub Actions jobs.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Any GitHub organization that installs the Blacksmith app."
+   ],
+   "card_required": false,
+   "overage": "unknown",
+   "setup_steps": [
+    "Install the Blacksmith GitHub app on your organization.",
+    "Change a job's runs-on label to a Blacksmith runner.",
+    "The pages read do not say what happens past the free minutes: watch usage and stop at 3,000."
+   ],
+   "source": "https://www.blacksmith.sh/pricing",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "github-actions-free",
+   "vendor": "GitHub (Microsoft)",
+   "name": "GitHub Actions on GitHub Free",
+   "kind": "ci",
+   "form": "free_tier",
+   "free_amount": "Standard GitHub-hosted runners in public repositories are free. Private repositories get $12 of included compute per month on GitHub Free; at $0.006 per Linux 2-core minute, that covers 2,000 minutes (computed here).",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a GitHub account on GitHub Free."
+   ],
+   "card_required": false,
+   "overage": "stops",
+   "setup_steps": [
+    "Sign in with gh auth login, which opens the browser.",
+    "Add a workflow under .github/workflows that runs on a standard runner.",
+    "Leave no payment method on file, or set a budget that stops usage at $0."
+   ],
+   "source": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cloudflare-d1-free",
+   "vendor": "Cloudflare",
+   "name": "Cloudflare D1 on Workers Free",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "5 million rows read per day, 100,000 rows written per day, 5 GB total storage and 10 databases.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with a Cloudflare account on Workers Free."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a Cloudflare account.",
+    "Sign in with wrangler login, which opens the browser.",
+    "Create a database with wrangler d1 create; past a daily limit, queries fail until reset."
+   ],
+   "source": "https://developers.cloudflare.com/d1/platform/pricing/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cloudflare-r2-free",
+   "vendor": "Cloudflare",
+   "name": "Cloudflare R2 free tier",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "10 GB-month storage, 1 million Class A operations and 10 million Class B operations per month, with free egress, on Standard storage.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a Cloudflare account who adds an R2 subscription through checkout."
+   ],
+   "card_required": null,
+   "overage": "bills",
+   "setup_steps": [
+    "Create a Cloudflare account and add the R2 subscription in the dashboard.",
+    "Sign in with wrangler login, which opens the browser.",
+    "Usage above the free tier bills: stop at the free amount yourself."
+   ],
+   "source": "https://developers.cloudflare.com/r2/pricing/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "cloudflare-workers-free",
+   "vendor": "Cloudflare",
+   "name": "Cloudflare Workers Free plan",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "100,000 requests per day, 10 ms CPU time per invocation and 128 MB memory, plus Workers KV at 100,000 reads and 1,000 writes per day.",
+   "resets": "daily",
+   "who_qualifies": [
+    "Anyone with a Cloudflare account."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a Cloudflare account.",
+    "Sign in with wrangler login, which opens the browser.",
+    "Deploy with wrangler deploy; past the daily limit, Cloudflare returns Error 1027 instead of billing."
+   ],
+   "source": "https://developers.cloudflare.com/workers/platform/pricing/",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "github-pages",
+   "vendor": "GitHub (Microsoft)",
+   "name": "GitHub Pages",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "Static site hosting for public repositories. A published site is up to 1 GB, with a soft bandwidth limit of 100 GB per month and a soft limit of 10 builds per hour.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a GitHub account, for a public repository.",
+    "Not for an online business, e-commerce or commercial SaaS."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Sign in with gh auth login, which opens the browser.",
+    "Turn on Pages in the repository settings and pick a branch or workflow."
+   ],
+   "source": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "hf-spaces-cpu-basic",
+   "vendor": "Hugging Face",
+   "name": "Hugging Face Spaces CPU Basic",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "Static Spaces are free for everyone. CPU Basic hardware is 2 vCPU, 16 GB RAM and 50 GB of non-persistent disk.",
+   "resets": "none",
+   "who_qualifies": [
+    "Anyone with a Hugging Face account, for a static Space.",
+    "A new CPU Basic Gradio or Docker Space needs a paid plan."
+   ],
+   "card_required": null,
+   "overage": "unknown",
+   "setup_steps": [
+    "Create a free account on huggingface.co.",
+    "Sign in with hf auth login, which prompts for a token; never pass it as an argument.",
+    "Create a static Space and push your site."
+   ],
+   "source": "https://huggingface.co/docs/hub/spaces-overview",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "supabase-free",
+   "vendor": "Supabase",
+   "name": "Supabase Free plan",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "2 active projects; per project a 500 MB database, 1 GB file storage, 5 GB egress, 50,000 monthly active users and 500,000 Edge Function invocations.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a Supabase account."
+   ],
+   "card_required": null,
+   "overage": "unknown",
+   "setup_steps": [
+    "Create a Supabase account and a project on the Free plan.",
+    "Sign in with supabase login, which opens the browser.",
+    "Free projects pause after 1 week of inactivity. No spend cap is named on the page read: stop at the free amount yourself."
+   ],
+   "source": "https://supabase.com/pricing",
+   "checked": "2026-11-02"
+  },
+  {
+   "id": "vercel-hobby",
+   "vendor": "Vercel",
+   "name": "Vercel Hobby plan",
+   "kind": "hosting",
+   "form": "free_tier",
+   "free_amount": "Per month: 1 million function invocations, 4 hours Fluid Active CPU, 1 million CDN requests and 100 GB Fast Data Transfer.",
+   "resets": "monthly",
+   "who_qualifies": [
+    "Anyone with a Vercel account, for personal, non-commercial use only."
+   ],
+   "card_required": null,
+   "overage": "stops",
+   "setup_steps": [
+    "Create a Vercel account on the Hobby plan.",
+    "Sign in with vercel login, which opens the browser.",
+    "Deploy with vercel; Hobby stops at its limits."
+   ],
+   "source": "https://vercel.com/pricing",
+   "checked": "2026-11-02"
+  }
+ ]
+}
