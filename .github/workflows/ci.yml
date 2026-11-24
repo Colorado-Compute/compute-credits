@@ -24,6 +24,6 @@ jobs:
       short: |
         python3 -I tools/checks.py --self-test
         python3 -I tools/checks.py
-        python3 -I catalog/check.py --self-test
-        python3 -I catalog/check.py
+        python3 -I tools/catalog.py --self-test
+        python3 -I tools/catalog.py --check
       standard: bash tools/secret_scan.sh
