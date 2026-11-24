@@ -1,49 +1,51 @@
 # Compute credits
 
-The one public catalog of free credits, free tiers and subscriptions whose included usage is subsidized, in every lane: CI, CPU, GPU, inference, hosting and AI tools. You do not need a startup or a company. Published by [Colorado-Compute](https://github.com/Colorado-Compute) under [Apache-2.0](LICENSE).
+![Compute credits: 170 rows in six lanes](assets/hero.svg)
+
+## [➡️ Open the Credits Explorer](https://colorado-compute.github.io/compute-credits/)
+
+![rows](https://img.shields.io/badge/rows-170-0969da) ![free rows](https://img.shields.io/badge/free_rows-66-2da44e) ![lanes](https://img.shields.io/badge/lanes-6-8250df) ![newest check](https://img.shields.io/badge/checked-2026--11--24-gray)
+
+The one public catalog of free credits, free tiers and subsidized subscriptions. You need no startup and no company. Published by [Colorado-Compute](https://github.com/Colorado-Compute) under [Apache-2.0](LICENSE).
+
+| Lane | Rows | Free rows |
+| --- | --- | --- |
+| ⚙️ ci | 12 | 8 |
+| 🖥️ cpu | 35 | 13 |
+| 🎮 gpu | 41 | 9 |
+| 🧠 inference | 36 | 15 |
+| ☁️ hosting | 18 | 12 |
+| 🧰 tools | 28 | 9 |
+| **All** | **170** | **66** |
+
+Counts are by each row's first lane, from [`catalog/plans.json`](catalog/plans.json). A free row has `price_month` 0. [`catalog/README.md`](catalog/README.md) lists the fields and commands. The catalog moved here from [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) on 2026-11-24 and replaced the 28-row `credits.json`.
 
 ```mermaid
 flowchart LR
-  P[Pick a lane<br/>catalog/plans.json] --> S[Sign up on the<br/>vendor's own page]
-  S --> L[Sign in with the<br/>vendor's CLI, no key in a command]
-  L --> G[Set the vendor's spend stop<br/>at the included amount]
+  P[Pick a lane] --> S[Sign up on the vendor page]
+  S --> L[Sign in with the vendor CLI]
+  L --> G[Set the vendor spend stop]
   G --> R[Run]
 ```
 
-## The catalog moved in
+Steps are in [`guides/setup-template.md`](guides/setup-template.md).
 
-On 2026-11-24 the plan catalog and its tools moved here from [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter). It replaces the 28-row `credits.json`. A fuller README with tables per lane comes in a later step.
+## Three doors
 
-| Lane | Rows |
-| --- | --- |
-| ci | 11 |
-| cpu | 31 |
-| gpu | 39 |
-| inference | 32 |
-| hosting | 16 |
-| tools | 26 |
-| **All** | **155** |
+| Door | Repo | Use |
+| --- | --- | --- |
+| 🚀 | [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Apply as a company: credits that need a company, funding or an invitation, and a matcher |
+| 💳 | This repo | Sign up or subscribe, as anyone |
+| 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into OpenCode and Claude Code |
 
-Counts are by each row's first lane, from [`catalog/plans.json`](catalog/plans.json). [`catalog/README.md`](catalog/README.md) lists the fields, the merge rules and the commands.
+## Rules
 
-## What is here
-
-| Path | What it is |
-| --- | --- |
-| [`catalog/`](catalog/README.md) | `plans.json`, one row per plan, and the README that defines each field |
-| [`guides/setup-template.md`](guides/setup-template.md) | Pick a lane, sign up, sign in, set the spend stop, run |
-| `tools/` | `catalog.py` builds and checks the catalog, `checks.py` runs the text checks, and the secret scan |
-
-## Related
-
-| Repo | Use |
-| --- | --- |
-| [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Open-weight models and tools setup: wire free compute to Claude Code and OpenCode |
-| [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Startup programs: credits that need a company, funding or an invitation, and a matcher |
-| [Colorado-Compute/compute-credits](https://github.com/Colorado-Compute/compute-credits) | This repo: free credits and subsidized plans for anyone |
+- First-party pages only: each row's `source` is the vendor page.
+- Read dates: `checked` is the day someone read that page.
+- No key values: sign in with the vendor CLI, never a key in a command.
+- Set the vendor's spend stop at the included amount.
+- No vendor paid to appear, and Colorado-Compute is no vendor's partner. The list leaves out some vendors by policy.
 
 ## Fix a row
 
-Open a pull request that edits `catalog/plans.json`. Set the row's `source` to the vendor page you read and `checked` to today. Run `python3 -I tools/catalog.py --format`, then `python3 -I tools/catalog.py --check`. CI runs every check on the pull request.
-
-No vendor paid to appear here, and Colorado-Compute is not a partner of any vendor listed. The list leaves out some vendors by policy.
+Open a pull request that edits `catalog/plans.json`. Set `source` to the vendor page you read and `checked` to today. Run `python3 -I tools/catalog.py --format`, then `--check`. CI runs every check. `tools/` holds `catalog.py`, which builds and checks the catalog, and `checks.py`, which runs the text checks and the secret scan.

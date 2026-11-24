@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-labelledby="t d">
+<title id="t">Compute credits: 170 rows in six lanes</title>
+<desc id="d">Bars show rows per lane. The darker part of each bar is the free rows.</desc>
+<style>
+:root{--bg:#f6f8fa;--fg:#1f2328;--mut:#59636e;--bar:#b6e3ff;--free:#0969da;--line:#d1d9e0}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--fg:#f0f6fc;--mut:#9198a1;--bar:#1f3b5c;--free:#58a6ff;--line:#30363d}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg)}
+.m{fill:var(--mut)}
+</style>
+<rect width="1280" height="400" rx="16" fill="var(--bg)" stroke="var(--line)"/>
+<text x="48" y="92" font-size="52" font-weight="700">Compute credits</text>
+<text x="48" y="136" font-size="22" class="m">Free credits and subsidized plans, one catalog.</text>
+<text x="48" y="250" font-size="96" font-weight="700" fill="var(--free)" style="fill:var(--free)">170</text>
+<text x="48" y="290" font-size="22" class="m">rows, 66 of them free</text>
+<text x="48" y="330" font-size="22" class="m">Newest check 2026-11-24</text>
+<text x="470" y="90" font-size="26">⚙️</text>
+<text x="515" y="90" font-size="22">CI</text>
+<rect x="640" y="68" width="123" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="68" width="82" height="32" rx="6" fill="var(--free)"/>
+<text x="775" y="91" font-size="22" font-weight="700">12</text><text x="811" y="91" font-size="18" class="m">8 free</text>
+<text x="470" y="140" font-size="26">🖥️</text>
+<text x="515" y="140" font-size="22">CPU</text>
+<rect x="640" y="118" width="358" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="118" width="134" height="32" rx="6" fill="var(--free)"/>
+<text x="1010" y="141" font-size="22" font-weight="700">35</text><text x="1046" y="141" font-size="18" class="m">13 free</text>
+<text x="470" y="190" font-size="26">🎮</text>
+<text x="515" y="190" font-size="22">GPU</text>
+<rect x="640" y="168" width="420" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="168" width="92" height="32" rx="6" fill="var(--free)"/>
+<text x="1072" y="191" font-size="22" font-weight="700">41</text><text x="1108" y="191" font-size="18" class="m">9 free</text>
+<text x="470" y="240" font-size="26">🧠</text>
+<text x="515" y="240" font-size="22">Inference</text>
+<rect x="640" y="218" width="369" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="218" width="154" height="32" rx="6" fill="var(--free)"/>
+<text x="1021" y="241" font-size="22" font-weight="700">36</text><text x="1057" y="241" font-size="18" class="m">15 free</text>
+<text x="470" y="290" font-size="26">☁️</text>
+<text x="515" y="290" font-size="22">Hosting</text>
+<rect x="640" y="268" width="184" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="268" width="123" height="32" rx="6" fill="var(--free)"/>
+<text x="836" y="291" font-size="22" font-weight="700">18</text><text x="872" y="291" font-size="18" class="m">12 free</text>
+<text x="470" y="340" font-size="26">🧰</text>
+<text x="515" y="340" font-size="22">Tools</text>
+<rect x="640" y="318" width="286" height="32" rx="6" fill="var(--bar)"/>
+<rect x="640" y="318" width="92" height="32" rx="6" fill="var(--free)"/>
+<text x="938" y="341" font-size="22" font-weight="700">28</text><text x="974" y="341" font-size="18" class="m">9 free</text>
+</svg>
