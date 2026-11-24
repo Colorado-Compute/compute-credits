@@ -21,9 +21,11 @@ jobs:
   ci:
     uses: SoulCraft-Org/git-crafter/.github/workflows/ci-standard.yml@dd03762898c5cbd816b7a093307c643dcc80a5c3 # v4.0.0
     with:
+      node-version: "26"
       short: |
         python3 -I tools/checks.py --self-test
         python3 -I tools/checks.py
         python3 -I tools/catalog.py --self-test
         python3 -I tools/catalog.py --check
+        node --test tests/site.test.mjs
       standard: bash tools/secret_scan.sh
