@@ -1107,8 +1107,9 @@
    "trains_on_data": null,
    "commercial_use": null,
    "limits": "Credits expire after 30 days. At the end of the trial the account is suspended: you can log in but cannot run warehouses, load data or query; to reactivate, add a card and upgrade. External network access, hybrid tables, outbound private connectivity, Openflow and Duo MFA are unavailable. Trial accounts are cancelled only through Snowflake Support. This catalog lists none of the OpenAI, xAI or SpaceX models the platform may also host.",
-   "source": "https://signup.snowflake.com/",
+   "source": "https://www.snowflake.com/en/snowflake-trial/",
    "sources_extra": [
+    "https://signup.snowflake.com/",
     "https://docs.snowflake.com/en/user-guide/admin-trial-account"
    ],
    "checked": "2026-11-24",
