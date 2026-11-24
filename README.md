@@ -36,7 +36,7 @@ Steps are in [`guides/setup-template.md`](guides/setup-template.md).
 | --- | --- | --- |
 | 🚀 | [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Apply as a company: credits that need a company, funding or an invitation, and a matcher |
 | 💳 | This repo | Sign up or subscribe, as anyone |
-| 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into OpenCode and Claude Code |
+| 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into the OpenCode Desktop App and the Claude Desktop App |
 
 ## Rules
 
