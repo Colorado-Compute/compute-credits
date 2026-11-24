@@ -34,7 +34,7 @@ Steps are in [`guides/setup-template.md`](guides/setup-template.md).
 
 | Door | Repo | Use |
 | --- | --- | --- |
-| 🚀 | [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Apply as a company: credits that need a company, funding or an invitation |
+| 🚀 | [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Apply as a company: credits that need a company, funding or an invitation, and a matcher |
 | 💳 | This repo | Sign up or subscribe, as anyone |
 | 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into OpenCode and Claude Code |
 
@@ -48,4 +48,4 @@ Steps are in [`guides/setup-template.md`](guides/setup-template.md).
 
 ## Fix a row
 
-Open a pull request that edits `catalog/plans.json`. Set `source` to the vendor page you read and `checked` to today. Run `python3 -I tools/catalog.py --format`, then `--check`. CI runs every check. `tools/` holds `catalog.py` and `checks.py`.
+Open a pull request that edits `catalog/plans.json`. Set `source` to the vendor page you read and `checked` to today. Run `python3 -I tools/catalog.py --format`, then `--check`. CI runs every check. `tools/` holds `catalog.py`, which builds and checks the catalog, and `checks.py`, which runs the text checks and the secret scan.
