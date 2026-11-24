@@ -495,6 +495,55 @@
    "verified": true
   },
   {
+   "id": "databricks-free-edition",
+   "name": "Databricks Free Edition",
+   "provider": "Databricks",
+   "provider_hq": "US",
+   "lanes": [
+    "cpu"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "Forever free with daily limits on usage, one serverless workspace.",
+   "includes": "One serverless workspace with a daily compute quota. No classic compute and no custom compute configurations.",
+   "resets": "daily",
+   "unit_cost_vs_payg": "Free",
+   "card": null,
+   "overage": "stops",
+   "trains_on_data": null,
+   "commercial_use": false,
+   "limits": "Serverless compute only. No GPU serving endpoints, no custom models on GPU and no batch inference. If you pass the daily quota, compute is shut down for the rest of the day; data and settings are kept. Free Edition accounts may not be used for commercial purposes. Databricks may delete accounts inactive for a prolonged period. The page states nothing on cards or on training with your data.",
+   "source": "https://docs.databricks.com/aws/en/getting-started/free-edition-limitations",
+   "sources_extra": [],
+   "checked": "2026-11-24",
+   "verified": true
+  },
+  {
+   "id": "databricks-trial",
+   "name": "Databricks free trial",
+   "provider": "Databricks",
+   "provider_hq": "US",
+   "lanes": [
+    "cpu",
+    "inference"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "Free for two weeks, no card. Access pauses at the end and Databricks does not charge you.",
+   "includes": "Up to $400 in free usage over two weeks of full platform access, which the page says is for business evaluation.",
+   "resets": null,
+   "unit_cost_vs_payg": "$0 within the free usage",
+   "card": false,
+   "overage": "stops",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "After the trial you choose to upgrade by adding a payment method; if you do not, access is paused and Databricks does not charge you. Per-model inference rates were not read. This catalog lists none of the OpenAI, xAI or SpaceX models the platform may also host.",
+   "source": "https://www.databricks.com/try-databricks",
+   "sources_extra": [],
+   "checked": "2026-11-24",
+   "verified": true
+  },
+  {
    "id": "depot-developer",
    "name": "Depot Developer",
    "provider": "Depot",
@@ -818,6 +867,31 @@
    "verified": true
   },
   {
+   "id": "azure-free-account",
+   "name": "Azure free account",
+   "provider": "Microsoft",
+   "provider_hq": "US",
+   "lanes": [
+    "cpu",
+    "hosting"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "$200 credit for 30 days, then pay as you go. Needs a phone number, a non-prepaid credit or debit card and a Microsoft or GitHub account.",
+   "includes": "$200 credit to use within 30 days. Free monthly amounts of 20+ popular services for 12 months. Free monthly amounts of 65+ always-free services.",
+   "resets": null,
+   "unit_cost_vs_payg": "$0 within the credit and the free amounts",
+   "card": true,
+   "overage": "stops",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "New Azure customers only, one account with free services and the $200 credit per new customer. Move to pay-as-you-go within 30 days or after you use the credit; if you do not, the account and services are disabled, and you resume by moving to pay as you go. Only credit cards are accepted in Hong Kong and Brazil. This catalog lists none of the OpenAI, xAI or SpaceX models the platform may also host.",
+   "source": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account",
+   "sources_extra": [],
+   "checked": "2026-11-24",
+   "verified": true
+  },
+  {
    "id": "namespace-team",
    "name": "Namespace Team",
    "provider": "Namespace",
@@ -1014,6 +1088,33 @@
    "verified": true
   },
   {
+   "id": "snowflake-trial",
+   "name": "Snowflake free trial",
+   "provider": "Snowflake",
+   "provider_hq": "US",
+   "lanes": [
+    "cpu",
+    "inference"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "Sign-up needs no payment information. AI features stay off until you add a credit card, which does not upgrade the trial.",
+   "includes": "$400 in free credits for 30 days, or until the free usage is used up. Credits pay for virtual warehouses, storage and serverless features, AI features included.",
+   "resets": null,
+   "unit_cost_vs_payg": "$0 within the free credits",
+   "card": false,
+   "overage": "stops",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "Credits expire after 30 days. At the end of the trial the account is suspended: you can log in but cannot run warehouses, load data or query; to reactivate, add a card and upgrade. External network access, hybrid tables, outbound private connectivity, Openflow and Duo MFA are unavailable. Trial accounts are cancelled only through Snowflake Support. This catalog lists none of the OpenAI, xAI or SpaceX models the platform may also host.",
+   "source": "https://signup.snowflake.com/",
+   "sources_extra": [
+    "https://docs.snowflake.com/en/user-guide/admin-trial-account"
+   ],
+   "checked": "2026-11-24",
+   "verified": true
+  },
+  {
    "id": "ubicloud",
    "name": "Ubicloud runners",
    "provider": "Ubicloud",
@@ -1059,6 +1160,30 @@
    "source": "https://www.warpbuild.com/pricing",
    "sources_extra": [],
    "checked": "2026-11-23",
+   "verified": true
+  },
+  {
+   "id": "amd-developer-cloud-credit",
+   "name": "AMD Developer Cloud complimentary credit (MI300X)",
+   "provider": "AMD",
+   "provider_hq": "US",
+   "lanes": [
+    "gpu"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "An initial $100 credit for qualified developers who apply and join the AMD AI Developer Program.",
+   "includes": "$100 of complimentary credit for AMD Instinct MI300X GPUs on the AMD Developer Cloud (run on DigitalOcean's platform).",
+   "resets": null,
+   "unit_cost_vs_payg": "$0 within the credit",
+   "card": null,
+   "overage": "bills",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "Awarded by application, at AMD's sole discretion, from the intended use and a description of how you plan to use the GPU credit. Deposited within three business days of approval. Credit hours expire 30 days from deposit unless the confirmation email says otherwise. The credit covers MI300X GPUs only, not volumes, object storage or backups, and a powered-off instance still uses credit until destroyed. With no payment method on file when the credit expires or runs out, your GPU VM and its data are destroyed; with a payment method, it is charged automatically.",
+   "source": "https://www.amd.com/en/developer/resources/cloud-access/amd-developer-cloud.html",
+   "sources_extra": [],
+   "checked": "2026-11-24",
    "verified": true
   },
   {
@@ -1248,6 +1373,30 @@
     "https://docs.digitalocean.com/products/amd/details/credits/"
    ],
    "checked": "2026-11-23",
+   "verified": true
+  },
+  {
+   "id": "paperspace-free",
+   "name": "Paperspace (DigitalOcean) Gradient Free",
+   "provider": "DigitalOcean (Paperspace)",
+   "provider_hq": null,
+   "lanes": [
+    "gpu"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "The Free plan has no hourly or monthly charge listed.",
+   "includes": "Free CPU (C4) and Free GPU (M4000) notebook machines, and 5 GB of included storage.",
+   "resets": null,
+   "unit_cost_vs_payg": "Free machines carry no hourly rate; extra storage is $0.29/GB-month.",
+   "card": null,
+   "overage": "bills",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "Free machines can only be used for Notebooks in private workspaces. The page states no session limit, no hour cap and no card rule for the Free plan. The A4000, RTX4000, RTX5000, P4000 and P5000 free machines need Pro ($8 a month for a user, $12 for a team) and the A5000, A6000 and A100-80G need Growth.",
+   "source": "https://docs.digitalocean.com/products/paperspace/pricing",
+   "sources_extra": [],
+   "checked": "2026-11-24",
    "verified": true
   },
   {
@@ -3295,6 +3444,56 @@
    "source": "https://vercel.com/pricing",
    "sources_extra": [],
    "checked": "2026-11-23",
+   "verified": true
+  },
+  {
+   "id": "zoho-catalyst-free-tier",
+   "name": "Zoho Catalyst free tier",
+   "provider": "Zoho",
+   "provider_hq": "IN",
+   "lanes": [
+    "hosting",
+    "cpu"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "US$5 worth of free credits a month, forever. You pay only after you exceed them.",
+   "includes": "US$5 of free credits a month. The pricing calculator shows 25,000 GB-seconds of Functions, 900 GB-minutes of AppSail and 2,000 Circuits state transitions free. The FAQ says the tier covers more than 70 components, applied per account across all projects.",
+   "resets": "monthly",
+   "unit_cost_vs_payg": "Free within the tier; past it, usage bills at the pay-as-you-go rates (Functions US$0.000016 per GB-second, AppSail US$0.0013 per GB-minute).",
+   "card": null,
+   "overage": "bills",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "If a project exceeds the free tier limits in an account, a minimum billing of US$5 applies. The page does not say whether a card is needed to use the free tier.",
+   "source": "https://catalyst.zoho.com/pricing.html",
+   "sources_extra": [],
+   "checked": "2026-11-24",
+   "verified": true
+  },
+  {
+   "id": "zoho-catalyst-trial",
+   "name": "Zoho Catalyst free trial",
+   "provider": "Zoho",
+   "provider_hq": "IN",
+   "lanes": [
+    "hosting",
+    "cpu"
+   ],
+   "price_month": 0,
+   "currency": "USD",
+   "price_note": "US$250 of credits for 6 months. The page says to add a card to claim them.",
+   "includes": "US$250 in wallet credits. The trial lasts 6 months or until you use the US$250, whichever is earlier.",
+   "resets": null,
+   "unit_cost_vs_payg": "$0 within the credits",
+   "card": true,
+   "overage": "bills",
+   "trains_on_data": null,
+   "commercial_use": null,
+   "limits": "Unused wallet credits expire after 6 months. Once the credits are used, invoicing starts from the next month for usage above them. Pay-as-you-go rates on the page include US$0.000016 per GB-second for Functions and US$0.0013 per GB-minute for AppSail. A paid subscription adds only US$5 a month of credits (the US$25 plan gives US$30), so it has no row here.",
+   "source": "https://catalyst.zoho.com/pricing.html",
+   "sources_extra": [],
+   "checked": "2026-11-24",
    "verified": true
   },
   {
