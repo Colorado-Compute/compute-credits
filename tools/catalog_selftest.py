@@ -125,6 +125,7 @@ FAILING = [
     ("a bad lane fails", v(lanes=["cloud"])),
     ("a null models fails", v(models=None)),
     ("an unknown models value fails", v(models="free")),
+    ("a list models fails", v(models=["open"])),
     ("a missing models key fails", lambda d: d["rows"][0].pop("models")),
     ("a currency symbol fails", v(currency="\u20ac")),
     ("a string price fails", v(price_month="$5")),

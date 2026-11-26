@@ -3990,7 +3990,7 @@
    "lanes": [
     "tools"
    ],
-   "models": "closed",
+   "models": "mixed",
    "price_month": 20,
    "currency": "USD",
    "price_note": null,
@@ -4493,7 +4493,7 @@
    "lanes": [
     "tools"
    ],
-   "models": "mixed",
+   "models": "closed",
    "price_month": 10,
    "currency": "USD",
    "price_note": "$10 a month. 14-day free trial with $5 of GPT-6 Luna usage, no credit card required; trial ends when the $5 is used or 14 days pass.",

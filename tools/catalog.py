@@ -211,7 +211,7 @@ def check_flags(where, row):
     extra = row.get("sources_extra")
     return failed(where, [
         (not CURRENCY.fullmatch(str(row.get("currency", ""))), f"currency {row.get('currency')!r} is not an ISO 4217 code"),
-        (row.get("models") not in MODELS, f"models {row.get('models')!r} is not open, closed or mixed"),
+        (not isinstance(row.get("models"), str) or row["models"] not in MODELS, f"models {row.get('models')!r} is not open, closed or mixed"),
         (row.get("overage") not in OVERAGE, f"overage {row.get('overage')!r} is not stops, bills, unknown or null"),
         *[(row.get(k) not in (True, False, None), f"{k} is not true, false or null") for k in ("card", "trains_on_data", "commercial_use")],
         (not isinstance(row.get("verified"), bool), "verified is not true or false"),
