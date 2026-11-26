@@ -18,7 +18,7 @@ The one public catalog of free credits, free tiers and subsidized subscriptions.
 | 🧰 tools | 28 | 9 |
 | **All** | **170** | **66** |
 
-Counts are by each row's first lane, from [`catalog/plans.json`](catalog/plans.json). A free row has `price_month` 0. [`catalog/README.md`](catalog/README.md) lists the fields and commands. The catalog moved here from [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) on 2026-11-24 and replaced the 28-row `credits.json`.
+Counts are by each row's first lane, from [`catalog/plans.json`](catalog/plans.json). A free row has `price_month` 0. Each row's `models` field says `open`, `closed` or `mixed`. [`catalog/README.md`](catalog/README.md) lists the fields and commands. The catalog moved here from [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) on 2026-11-24 and replaced the 28-row `credits.json`.
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ Steps are in [`guides/setup-template.md`](guides/setup-template.md).
 | --- | --- | --- |
 | 🚀 | [Colorado-Startups/startup-credits](https://github.com/Colorado-Startups/startup-credits) | Apply as a company: credits that need a company, funding or an invitation, and a matcher |
 | 💳 | This repo | Sign up or subscribe, as anyone |
-| 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into the OpenCode Desktop App and the Claude Desktop App |
+| 🔌 | [SoulCraft-Org/compute-crafter](https://github.com/SoulCraft-Org/compute-crafter) | Wire open-weight models into OpenCode |
 
 ## Rules
 

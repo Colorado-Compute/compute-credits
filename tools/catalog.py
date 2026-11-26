@@ -23,10 +23,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CATALOG = os.path.join("catalog", "plans.json")
 SOURCE_FILES = ("free.json", "plans.compute.json", "plans.inference.json")
 
-PUBLIC_FIELDS = ("id", "name", "provider", "provider_hq", "lanes", "price_month", "currency", "price_note", "includes",
+PUBLIC_FIELDS = ("id", "name", "provider", "provider_hq", "lanes", "models", "price_month", "currency", "price_note", "includes",
                  "resets", "unit_cost_vs_payg", "card", "overage", "trains_on_data", "commercial_use", "limits",
                  "source", "sources_extra", "checked", "verified")
 LANES = ("ci", "cpu", "gpu", "inference", "hosting", "tools")
+# models: open = the plan sells no closed model (open-weight models only, or no model at all, such as CI runners);
+# closed = every model it sells is closed; mixed = it sells both. Never null.
+MODELS = {"open", "closed", "mixed"}
 OVERAGE = {"stops", "bills", "unknown", None}
 # Each shape is used with fullmatch: a trailing newline never passes.
 DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
@@ -208,6 +211,7 @@ def check_flags(where, row):
     extra = row.get("sources_extra")
     return failed(where, [
         (not CURRENCY.fullmatch(str(row.get("currency", ""))), f"currency {row.get('currency')!r} is not an ISO 4217 code"),
+        (not isinstance(row.get("models"), str) or row["models"] not in MODELS, f"models {row.get('models')!r} is not open, closed or mixed"),
         (row.get("overage") not in OVERAGE, f"overage {row.get('overage')!r} is not stops, bills, unknown or null"),
         *[(row.get(k) not in (True, False, None), f"{k} is not true, false or null") for k in ("card", "trains_on_data", "commercial_use")],
         (not isinstance(row.get("verified"), bool), "verified is not true or false"),
