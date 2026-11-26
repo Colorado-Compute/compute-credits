@@ -37,6 +37,7 @@ Counts are by each row's first lane, from `plans.json` on 2026-11-24. Rows were 
 | `id` | Lowercase, unique |
 | `name`, `provider`, `provider_hq` | The plan, its vendor, and the vendor's home country. `provider_hq` is an ISO 3166-1 alpha-2 code, or `null` |
 | `lanes` | One or more of `ci`, `cpu`, `gpu`, `inference`, `hosting`, `tools` |
+| `models` | `open`: the plan sells no closed model (open-weight models only, or no model at all, such as CI runners). `closed`: every model it sells is closed. `mixed`: both. Never null |
 | `price_month`, `currency` | The monthly price in the currency the page states (ISO 4217), or `null` |
 | `price_note`, `includes`, `resets`, `limits` | What the page says the plan gives, when it resets, and who or what limits it |
 | `unit_cost_vs_payg` | The plan's unit cost against the vendor's own pay-as-you-go rate |

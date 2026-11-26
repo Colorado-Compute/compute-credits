@@ -426,6 +426,7 @@ function boot() {
       h('div', { class: 'pills' }, pillsFor(r)),
       h('dl', { class: 'facts' },
         fact('Price', r.price_note),
+        fact('Models', r.models),
         fact('Resets', r.resets),
         fact('Limits', r.limits),
         fact('Against pay as you go', r.unit_cost_vs_payg),

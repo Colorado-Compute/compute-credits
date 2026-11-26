@@ -9,16 +9,16 @@ import tempfile
 from catalog import CATALOG, PUBLIC_FIELDS, CannotCheck, check, check_doc, format_catalog, merge, render
 
 NEW = {"id": "acme-free", "name": "Acme Free", "provider": "Acme", "provider_hq": "US", "exclude": None,
-       "status": "live", "lane": "gpu", "price_month": 0, "currency": "USD", "price_note": "Free.",
+       "status": "live", "lane": "gpu", "models": "open", "price_month": 0, "currency": "USD", "price_note": "Free.",
        "includes": "10 GPU hours a month.", "resets": "monthly", "unit_cost_vs_payg": "Free.", "card": False,
        "overage": "stops", "trains_on_data": None, "commercial_use": None, "limits": "One account.",
        "source": "https://acme.test/pricing", "sources_extra": ["https://acme.test/docs"], "checked": "2026-11-02",
        "verified_here": True, "evidence": [{"url": "https://acme.test", "quote": "q"}], "verify_note": "private",
        "cs_status": "use", "cs_note": "private", "notes": "private"}
-OLD = {"id": "acme-free", "name": "Acme Free (old)", "lane": "inference", "price_month": 0, "includes": "old",
+OLD = {"id": "acme-free", "name": "Acme Free (old)", "lane": "inference", "models": "open", "price_month": 0, "includes": "old",
        "unit_cost_vs_payg": "Free", "card": False, "overage": "stops", "have": True,
        "source": "https://acme.test/pricing", "checked": "2026-10-25", "notes": "private"}
-OTHER = {"id": "warpbuild", "name": "WarpBuild", "lane": "cpu", "price_month": None, "includes": "PAYG",
+OTHER = {"id": "warpbuild", "name": "WarpBuild", "lane": "cpu", "models": "open", "price_month": None, "includes": "PAYG",
          "unit_cost_vs_payg": "x", "card": True, "overage": "bills", "have": False,
          "source": "https://www.warpbuild.com/pricing", "checked": "2026-10-25", "notes": "private"}
 
@@ -123,6 +123,9 @@ FAILING = [
     ("a private term fails", v(price_note="Seen on the " + "Soul" + "Craft account.")),
     ("a duplicate id fails", lambda d: d["rows"].append(dict(d["rows"][0]))),
     ("a bad lane fails", v(lanes=["cloud"])),
+    ("a null models fails", v(models=None)),
+    ("an unknown models value fails", v(models="free")),
+    ("a missing models key fails", lambda d: d["rows"][0].pop("models")),
     ("a currency symbol fails", v(currency="\u20ac")),
     ("a string price fails", v(price_month="$5")),
     ("unsorted rows fail", lambda d: d["rows"].reverse()),
